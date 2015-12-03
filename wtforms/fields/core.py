@@ -449,7 +449,7 @@ class SelectField(SelectFieldBase):
 
     def iter_choices(self):
         for value, label in self.choices:
-            yield (value, label, self.coerce(value) == self.data)
+            yield (value, label, value == self.data)
 
     def process_data(self, value):
         try:
